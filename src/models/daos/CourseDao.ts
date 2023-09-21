@@ -3,26 +3,25 @@ class CourseDao {
     private thematicArea: string;
     private courseImage: {
       url: string;
-      key: string;
+      key?: string;
     };
     private courseBanner: {
       url: string;
-      key: string;
+      key?: string;
     };
     private courseTrailer?: {
       url: string;
-      key: string;
+      key?: string;
     };
-  
     private createAt: Date;
   
     constructor(
       courseName: string,
       thematicArea: string,
-      courseImage: { url: string; key: string },
-      courseBanner: { url: string; key: string },
+      courseImage: { url: string; key?: string },
+      courseBanner: { url: string; key?: string },
       createAt: Date,
-      courseTrailer?: { url: string; key: string }
+      courseTrailer?: { url: string; key?: string }
     ) {
       this.courseName = courseName;
       this.thematicArea = thematicArea;
@@ -51,29 +50,29 @@ class CourseDao {
     }
   
     // Getter y Setter para courseImage
-    getCourseImage(): { url: string; key: string } {
+    getCourseImage(): { url: string; key?: string } {
       return this.courseImage;
     }
   
-    setCourseImage(courseImage: { url: string; key: string }): void {
+    setCourseImage(courseImage: { url: string; key?: string }): void {
       this.courseImage = courseImage;
     }
   
     // Getter y Setter para courseBanner
-    getCourseBanner(): { url: string; key: string } {
+    getCourseBanner(): { url: string; key?: string } {
       return this.courseBanner;
     }
   
-    setCourseBanner(courseBanner: { url: string; key: string }): void {
+    setCourseBanner(courseBanner: { url: string; key?: string }): void {
       this.courseBanner = courseBanner;
     }
 
     // Getter y Setter para courseTrailer
-    getCourseTrailer(): { url: string; key: string } | undefined {
+    getCourseTrailer(): { url: string; key?: string } | undefined {
       return this.courseTrailer;
     }
   
-    setCourseTrailer(courseTrailer?: { url: string; key: string }): void {
+    setCourseTrailer(courseTrailer?: { url: string; key?: string }): void {
       this.courseTrailer = courseTrailer;
     }
   
